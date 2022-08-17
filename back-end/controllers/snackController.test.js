@@ -134,6 +134,7 @@ describe("snacks", () => {
 
         const response = await request(snacks).get("/snacks").expect(200);
         const parsedRes = JSON.parse(response.text);
+        console.log(parsedRes);
 
         expect(parsedRes.payload).toEqual(expect.arrayContaining(expected));
       });
